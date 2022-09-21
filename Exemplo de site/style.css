@@ -1,0 +1,32 @@
+@charset"UTF-8";
+*{/*Configuração global css*/
+font-family: 'Courier New', Courier, monospace;   
+font-size: 14pt;
+}
+body{
+    background-image: linear-gradient(to bottom,#1b7f7aec 30%,#4caba6e7,#1baac7);
+    background-attachment: fixed;   /* configura o jeito que o degradê vai ficar*/
+    
+}
+main{
+margin: auto; /*Centraliza no meio*/
+background-color: white;
+width: 800px;/*Largura*/
+box-shadow: 4px 4px 4px black;/*Sombra no box*/
+border-radius: 14px;/*Cantos arredondados*/
+padding: 15px; /*Da um espaço de borda*/
+
+}
+h1{
+    font-size: 18pt;
+    text-align: center;
+    color: #4C4A59;
+    text-shadow: 1px 1px 1px #4c4a59d5;/*Sombra no titulo*/
+}
+h2{
+    color: #f78e339a;
+    text-shadow: 2px 2px 2px #f2cdac85;
+}
+p{
+    text-align: justify;/*organiza o texto*/
+}

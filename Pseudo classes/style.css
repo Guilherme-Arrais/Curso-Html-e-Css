@@ -1,0 +1,15 @@
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(17, 17, 19);
+    text-decoration: none;/*tira a linha debaixo do link*/
+}
+a:visited{
+    color: green;/*SE O SITE JÁ FOI VISITADO*/
+}
+a:hover{
+    color: aqua;
+    text-decoration: underline;/*Adiciona linha debaixo dos links*/
+}
+a::after{
+    content: "[LINK]";/*depois de todos os links adiciona o texto*/
+}
