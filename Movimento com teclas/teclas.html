@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: black;}
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+let px;
+let py;
+let dx;
+let dy;
+let vel;
+let obj;
+let tmp;
+function inicia(){
+ px=0;
+ py=0;
+dx=0;
+ dy=0;
+ vel=10;
+ obj= document.getElementById("div")
+document.addEventListener("keydown", movimentar)
+document.addEventListener("keyup", parou)
+tmp=setInterval(velocidade, 30)
+}
+ function movimentar(){
+    let tecla = event.key;
+    if(tecla=="ArrowLeft"){
+        px=-1      
+    }else if(tecla=="ArrowUp"){
+      py=-1
+    }else if(tecla=="ArrowRight"){
+        px=1
+    }else if(tecla=="ArrowDown"){
+        py=1
+    }}
+    function parou(){
+        let tecla = event.key;
+    if(tecla=="ArrowLeft"){
+        px=0    
+    }else if(tecla=="ArrowUp"){
+      py=0
+    }else if(tecla=="ArrowRight"){
+        px=0
+    }else if(tecla=="ArrowDown"){
+        py=0
+    }
+    }
+    function velocidade(){
+        dx+= px*vel;
+        dy+=py*vel;
+        obj.style.left=dx+"px";
+        obj.style.top=dy+"px";
+
+    }
+window.addEventListener('load', inicia)
+
+    </script>
+</body>
+</html>
