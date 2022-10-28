@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        let cima;
+        let px;
+        let py;
+        let horizontal;
+        let vertical;
+        let horizontaltras;
+        let cimaauto;
+        let vel ;
+        let bola;
+        let pxx;
+        let anima;
+         function inicio(){
+            px=0;
+            py=0;
+            vel=8;
+            pxx=0;
+            cimaauto=0;
+            horizontal=0;
+            horizontaltras=0;
+            vertical=0;
+            cima=0;
+            bola= document.getElementById("div");
+        let tmp=setInterval(animacao, 10);
+        anima = requestAnimationFrame(animacao);
+        }
+           function animacao(){
+           horizontal+=(px*vel);
+           vertical+=(py*2);
+            cimaauto+=(cima*2)
+           horizontaltras+=(pxx*0);
+           if(horizontal<=800){
+            px=1
+            bola.style.left=horizontal+"px";}
+            else if(horizontal>800 && horizontal<2300)
+            { py=1; bola.style.top=vertical+"px";}
+            else if(horizontal>2300 && horizontal<2400)
+            {pxx=-1;bola.style.left=horizontaltras+"px";}
+            else if(horizontal>2400 && horizontal<2450)
+            {cima=-1; bola.style.top=cimaauto+"px";}
+            else if(horizontal>2450){
+                horizontal=0;
+                vertical=0;
+                cimaauto=0;
+           horizontaltras=0;
+            }
+            
+          
+        }
+        window.addEventListener("load", inicio);
+        
+    </script>
+</body>
+</html>

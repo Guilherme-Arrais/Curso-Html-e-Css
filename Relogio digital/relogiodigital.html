@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input#hora{
+            position: absolute;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50pt;
+            width: 300px;
+            height:150px;
+            background-color: black;
+            color: rgb(126, 241, 126);
+            border-radius: 3px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% ,-50%);
+            box-shadow: 1px 1px 1px green;
+
+
+        }
+    </style>
+</head>
+<body>
+    <input type="text"  id="hora">
+    <script>
+        function atualiza(){
+            let hora = document.getElementById("hora")
+        let dt = new Date()
+        let hr = dt.getHours()
+        let min = dt.getMinutes()
+        let sec = dt.getSeconds()
+        hora.value=`${hr}:${min}:${sec}`
+        }
+        setInterval(atualiza, 1000)
+    </script>
+</body>
+</html>
