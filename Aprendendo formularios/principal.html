@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get" autocomplete="on"><!--Autocomplete nao sujere email já usado antes-->
+    <fieldset><!--Grupo de campos-->
+        <legend>Dados pessoais</legend>
+        <p>
+            <label for="iemail">E-mail</label>
+            <input type="email" name="email" id="iemail" required><!--required torna obrigatorio o envio somente com o campo preenchido-->
+        </p>
+        <p>
+            <label for="itelefone">Telefone</label>
+            <input type="tel" name="telefone" id="itelefone"  pattern="^\d{2}\d{4,5}-\d{4}$" required placeholder="(xx) xxxx-xxxx"><!--Parttner mostra a quantidade de caracteres que o numero de tel tem que ter -->
+        </p>
+        <p>
+            <label for="inivel">Barra de satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+        </p>
+        <p>
+            <label for="Iimagem"> Sua Foto</label>
+            <input type="file" name="imagem" id="Iimagem">
+        </p>
+        <p>
+            <label for="iselecionar">Selecione</label>
+            <select name="selecionar" id="iselecionar">
+                <option value="rj">rio</option>
+                <option value="sp">sao paulo</option>
+            </select>
+        </p>
+        <p>
+            <label for="idatalist">Profissao</label>
+            <input type="text" name="dtlist" id="idatalist" list="list">
+            <datalist id="list">
+                <option value="adm">administrador</option>
+            </datalist>
+        </p>
+        <textarea name="texto" id="itexto" cols="30" rows="10"></textarea>
+    </fieldset>
+    <input type="submit" value="enviar">
+    <input type="reset" value="limpar">
+    </form>
+</body>
+</html>
