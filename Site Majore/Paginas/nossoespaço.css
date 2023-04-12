@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(248, 151, 23);
+}
+div#local{
+    position: absolute;
+    top: 350px;
+    width: 400px;
+    height: 400px;
+    left: -7%;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+iframe#mapa{
+    width: 200px;
+    height: 150px;
+    border-radius: 4%;
+}
+div#resumo{
+    position: absolute;
+    left: 50%;
+    font-size: 1.6em;
+    transform: translate(-50%);    
+    text-align: justify;
+    width: 1000px;
+    height: 70vh;
+}
+@media screen and (min-width: 601px)and (max-width: 900px) {
+        div#resumo{
+            font-size: 1.2em;
+            width: 700px;
+        }
+}
+@media screen and (min-width: 101px)and (max-width: 600px) {
+    div#resumo{
+        font-size: 1em;
+        width: 400px;
+    }
+    div#local{
+        position: absolute;
+        top: 500px;
+      left: 20px;
+        
+    }
+}
